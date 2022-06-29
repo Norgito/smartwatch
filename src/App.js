@@ -1,23 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <div className="container">
+          <a className="navbar-brand" href="#">
+            SMARTWATCH
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="mx-auto"></div>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">
+                  Blog
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">
+                  Pricing
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+        <div className="content text-center">
+          <div class="sign">
+            <span class="fast-flicker">W</span>EL<span class="flicker">C</span>
+            OME
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
