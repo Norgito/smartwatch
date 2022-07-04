@@ -1,20 +1,14 @@
+import React from 'react';
+import { Header, Container } from './StyledComponents';
 
-import React from 'react'
-
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
   return (
-    <div>
-        <div className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-        <div className="content text-center">
-          <div class="sign">
-            <span class="fast-flicker">W</span>EL<span class="flicker">C</span>
-            OME
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    <Container>
+        <Header>{greeting}</Header>
+    </Container>
+  );
 }
 
-export default ItemListContainer
+
+export default ItemListContainer;
 
