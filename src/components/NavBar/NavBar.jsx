@@ -1,9 +1,7 @@
 import React from "react";
 import { AppBar, Typography, Toolbar, Tabs, Tab, Button } from "@mui/material";
 import WatchIcon from '@mui/icons-material/Watch';
-import CartWidget from "./CartWidget";
-
-
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar() {
   return (
