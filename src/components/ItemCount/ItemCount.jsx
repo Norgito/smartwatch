@@ -6,13 +6,15 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const add = () => {
     if (stock > count) {
-      setCount(count + 1);
+      const aux = count + 1
+      setCount(aux);
     }
   };
 
   const sub = () => {
     if (count > 1) {
-      setCount(count - 1);
+      const aux = count - 1
+      setCount(aux);
     }
   };
 

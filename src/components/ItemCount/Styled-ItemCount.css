@@ -11,10 +11,13 @@
   border: 0.2px solid rgb(255, 255, 255);
 }
 
+
+
 .containerButton {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 100px !important;
   margin: 1rem auto;
   width: 100px;
   height: 100px;
