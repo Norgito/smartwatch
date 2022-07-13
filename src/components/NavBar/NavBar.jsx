@@ -11,9 +11,10 @@ function NavBar() {
           <WatchIcon fontSize="large" color="white" />
           <Typography fontSize="large" color="secondary">SMARTWATCH</Typography>
           <Tabs textColor="white"  sx={{marginLeft:"auto"}}>
-            <Tab label="PRODUCTS" />
-            <Tab label="ABOUT US" />
-            <Tab label="CONTACT US" />
+            <Tab label="PRODUCTS 1" />
+            <Tab label="PRODUCTS 2" />
+            <Tab label="PRODUCTS 3" />
+            <Tab label="PRODUCTS 4" />
           </Tabs>
             <Button sx={{marginLeft:"auto"}} variant="outlined" color="secondary">Login</Button>
             <Button sx={{margin:"10px"}} variant="outlined" color="secondary">Register</Button>

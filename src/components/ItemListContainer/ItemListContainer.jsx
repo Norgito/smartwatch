@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Header, Container } from "./StyledComponents";
 import ItemCount from "../ItemCount/ItemCount";
-import {getFetch} from "../data/Productos";
+import {getFetch} from "../data/Products";
 import ItemList from "../items/ItemList";
 
 const ItemListContainer = ({ greeting }) => {
