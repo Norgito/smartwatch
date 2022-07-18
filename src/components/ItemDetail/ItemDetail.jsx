@@ -9,6 +9,7 @@ const ItemDetail = ({ prod }) => {
     return (
         <>
         <div className="singleProdContainer">
+         <div className="bkgrnd">
           <div className="singleProd">
             <img src={prod.image} alt={prod.product_name} className="imgBox" />
             </div>
@@ -19,6 +20,7 @@ const ItemDetail = ({ prod }) => {
                 <p className="stock">Available: {prod.stock} Units</p>
                 <ItemCount stock={10} initial={1} onAdd={onAdd} />
             </div>
+          </div>
          </div>
         </>
     );

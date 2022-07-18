@@ -1,18 +1,21 @@
 import React from 'react'
-import './styleItem.css';
+import {Card, CardImg, Image, Btn, Price, LinkDecor, H2Style} from'../StyledComponents'
+import { Link } from 'react-router-dom';
 
-const Item = ({prod}) => {
+const Item = ({prod, id}) => {
     return (
-        <div key={prod.id} className='card'>
-            <div className="card_img">
-            <img src={prod.image} alt={prod.product_name} />
-            </div>
-            <div className="card_header">
-                <h2>{prod.product_name}</h2>
-                <p>{prod.description}</p>
-                <p className='price'>$ {prod.price}</p>
-                <div className="btn">Add to cart</div>
-            </div>
+        <div key={prod.id}>
+            <Card>
+             <CardImg>
+               <Image src={prod.image} alt={prod.product_name} />
+             </CardImg>
+                <H2Style>{prod.product_name}</H2Style>
+                <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
+                    <LinkDecor> MORE DETAILS...</LinkDecor>
+                </Link>
+                <Price>${prod.price}</Price>
+                <Btn style={{cursor: "pointer"}}>ADD TO CART</Btn>
+            </Card>
         </div>
     )
 }

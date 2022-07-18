@@ -1,36 +1,35 @@
 import React, {useEffect, useState} from "react";
-import { Header, Container } from "./StyledComponents";
-import ItemCount from "../ItemCount/ItemCount";
-import {getFetch} from "../data/Products";
+import { Header, Container, ProdContainer } from "../StyledComponents";
+import customFetch from "../data/customFetch"
 import ItemList from "../items/ItemList";
-
-const ItemListContainer = ({ greeting }) => {
-
-  const [productos, setProductos] = useState([])
+import { useParams } from "react-router-dom";
+const { products } = require('../data/Products');
 
 
-   useEffect(() => {
-    getFetch
-    .then((respuesta) =>{
-      return respuesta
-    })
-    .then((resp) => setProductos(resp))
-    .then(err => console.log(err))
-   },[])
+const ItemListContainer = () => {
 
-  const onAdd = (cantidad) => {
-    console.log(`SE AGREGADO ${cantidad}`);
-  };
+  const [productos, setProductos] = useState([]);
+  const { id } = useParams ();
 
+
+  useEffect(() => {
+    if (id === undefined) {
+        customFetch(2000, products)
+          .then(result => setProductos(result))
+          .catch(err => console.log(err))
+        } else {
+          customFetch(2000, products.filter(item => item.categoryId === parseInt(id)))
+          .then(result => setProductos(result))
+          .catch(err => console.log(err))
+        }
+}, [id]);
   
   return (
     <Container>
-      <Header>{greeting}</Header>
-      <div className="prodContainer">
-      <ItemList productos={productos} />
-      </div>
-      <ItemCount stock={5} initial={1} onAdd={onAdd} />
-      
+      <Header>NEW ARRIVALS!</Header>
+      <ProdContainer>
+       <ItemList items={productos} />
+      </ProdContainer>
     </Container>
   );
 };

@@ -1,23 +1,50 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 html, body{
+    height: 100vh;
+    position: relative;
+    align-content: center;
+    justify-content: center;
     background-color: black;
 }
 .prodContainer{
+    margin-top: 40px;
+    flex: 1;
     display: flex;
-    justify-content: center;
+    flex-wrap:wrap;
+    gap: 20px;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .card {
-    width: 30%;
-    margin-top: 100px;
-    
-    
-    background-color: black;
-    color: rgb(215, 140, 230);
-    
+    width: 400px !important;
+    height: min-content;
+    padding: 25px;
+    background: rgb(27, 27, 27) !important;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
+
+.card .card_img {
+    width: 100%;
+    text-align: center;
+}
+
+.card .card_img img {
+    height: auto;
+    width: 100%;
+}
+
+
+
 
 .price {
     font-size: 2rem;
@@ -26,9 +53,17 @@ html, body{
 
 .btn {
     color: rgb(255, 255, 255);
-    border: 1px solid #fff;
+    border: 1px solid rgb(180, 71, 231);
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
 }
 
-img {
-    width: 80%;
-  }
+.btn a {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(180, 71, 231);
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+}
+

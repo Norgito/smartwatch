@@ -3,9 +3,9 @@ import React from 'react'
 import Item from './Item'
 
 
-function Itemlist ({productos}) {
+function Itemlist ({items}) {
     return (
-        productos.map((prod) => <Item key={prod.id} prod={prod} />)
+        items.map((prod) => <Item key={prod.id} prod={prod} id={prod.id} />)
     )
 }
 
