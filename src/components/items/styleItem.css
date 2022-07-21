@@ -51,19 +51,5 @@ html, body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.btn {
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(180, 71, 231);
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-}
 
-.btn a {
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(180, 71, 231);
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-}
 

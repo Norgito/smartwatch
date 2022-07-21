@@ -1,9 +1,15 @@
+import { useState} from 'react';
+import { Link } from 'react-router-dom';
 import "./StyleItemDetail.css"
+import {Btn} from'../StyledComponents'
 import ItemCount from "../ItemCount/ItemCount";
+
 const ItemDetail = ({ prod }) => {
+    const [itemCount, setItemCount] = useState(0);
 
     const onAdd = (cantidad) => {
-        console.log(`SE AGREGADO ${cantidad}`);
+        alert(`SE AGREGADO ${cantidad}`);
+        setItemCount(cantidad);
      }
 
     return (
@@ -18,7 +24,13 @@ const ItemDetail = ({ prod }) => {
                 <p>{prod.description}</p>
                 <p className='price'>$ {prod.price}</p>
                 <p className="stock">Available: {prod.stock} Units</p>
-                <ItemCount stock={10} initial={1} onAdd={onAdd} />
+                {
+                        itemCount === 0
+                        ? <ItemCount stock={prod.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Link to='/cart' style={{textDecoration: "none"}}>
+                            <Btn style={{cursor: "pointer"}}>CHECKOUT</Btn>
+                        </Link>
+                    }
             </div>
           </div>
          </div>

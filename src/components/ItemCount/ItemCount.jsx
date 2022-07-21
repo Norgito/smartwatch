@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Btn } from '../StyledComponents';
 import "./Styled-ItemCount.css";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(initial);
+const ItemCount = ({ stock = 0, onAdd }) => {
+  const [count, setCount] = useState(1);
 
   const add = () => {
     if (stock > count) {
@@ -33,10 +34,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           ➕
         </button>
       </div>
-
-      <button className="Agregar" onClick={AgregarCantidad}>
-        ADD TO CART
-      </button>
+      <Btn onClick={AgregarCantidad} style={{cursor: "pointer"}}>ADD TO CART</Btn>
     </>
   );
 };

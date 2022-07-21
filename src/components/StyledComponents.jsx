@@ -21,6 +21,7 @@ background: linear-gradient(to right, #FFFFFF 0%, #950ECF 100%);
 
   font-size: 3.5rem;
   width: 100%;
+  margin-top: 35px;
   text-align: center;
   font-weight: bold;
 `;
@@ -74,7 +75,7 @@ const H2Style = styled.div`
 const Btn = styled.button`
   border-radius: 20px;
   background-color: #000;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1rem;
   width: 200px;
   height: 40px;
@@ -89,7 +90,8 @@ const Btn = styled.button`
 
 const Price = styled.div`
   font-size: 2rem;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: -15px;
   font-weight: bold;
   color: #ffffff;
 `;
