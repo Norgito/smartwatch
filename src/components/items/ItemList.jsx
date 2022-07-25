@@ -1,12 +1,24 @@
 
 import React from 'react'
 import Item from './Item'
+import {Carga} from "../Styles/StyledComponents"
 
 
-function Itemlist ({items}) {
+const Itemlist = ({items}) => {
     return (
-        items.map((prod) => <Item key={prod.id} prod={prod} id={prod.id} />)
-    )
+       <>
+        {
+           items.length > 0 
+           ? items.map((prod) => <Item key={prod.id} prod={prod} id={prod.id} />)
+           : <>
+            <Carga>
+            <p className='pLoading'>LOADING</p>
+            <div className='cargando'></div>
+            </Carga>
+         </>
+        }
+      </>
+    );
 }
 
 export default Itemlist

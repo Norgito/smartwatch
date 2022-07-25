@@ -10,6 +10,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:650,
     stock: 10,
+    quantity: 0,
     image: 'https://i.imgur.com/X7GLGB8.png'
   },
   {
@@ -23,6 +24,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:800,
     stock: 500,
+    quantity: 0,
     image: "https://i.imgur.com/SWkZfYC.png"
   },
   {
@@ -36,6 +38,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:950,
     stock: 500,
+    quantity: 0,
     image: "https://i.imgur.com/gaMYbof.png"
   },
   {
@@ -49,6 +52,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:950,
     stock: 500,
+    quantity: 0,
     image: "https://i.imgur.com/sgo1Jsa.png"
   },
   {
@@ -62,6 +66,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:950,
     stock: 500,
+    quantity: 0,
     image: "https://i.imgur.com/wtD8ytE.png"
   },
   {
@@ -75,6 +80,7 @@ let products = [
     description: "Hands-free, Hands-on Much Experience",
     price:950,
     stock: 500,
+    quantity: 0,
     image: "https://i.imgur.com/xgbz8H4.png"
   },
 ];

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Btn } from '../StyledComponents';
+import { Btn } from '../Styles/StyledComponents';
 import "./Styled-ItemCount.css";
 
 const ItemCount = ({ stock = 0, onAdd }) => {

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Header, Container, ProdContainer } from "../StyledComponents";
+import { Container, ProdContainer, Carga } from "../Styles/StyledComponents";
 import customFetch from "../data/customFetch"
 import ItemList from "../items/ItemList";
 import { useParams } from "react-router-dom";
@@ -14,23 +14,34 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if (id === undefined) {
-        customFetch(2000, products)
+        customFetch(1000, products)
           .then(result => setProductos(result))
           .catch(err => console.log(err))
         } else {
-          customFetch(2000, products.filter(item => item.categoryId === parseInt(id)))
+          customFetch(1000, products.filter(item => item.categoryId === parseInt(id)))
           .then(result => setProductos(result))
           .catch(err => console.log(err))
         }
 }, [id]);
   
   return (
-    <Container>
-      <Header>NEW ARRIVALS!</Header>
+    <>
+    { 
+    ItemList
+    ?
+    <Container> 
       <ProdContainer>
        <ItemList items={productos} />
       </ProdContainer>
     </Container>
+    : <>
+            <Carga>
+            <p className="pLoading">LOADING</p>
+            <div className='cargando'></div>
+            </Carga>
+         </>
+    }
+    </>
   );
 };
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 70%;
-  height: 100%;
+  width: 1000px;
+  height: auto;
   background-color: #000000;
   display: flex;
   flex-direction: row;
@@ -14,11 +14,7 @@ const Container = styled.div`
 `;
 
 const Header = styled.h1`
-  background: #FFFFFF;
-background: linear-gradient(to right, #FFFFFF 0%, #950ECF 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
+  color: rgb(169, 115, 185);
   font-size: 3.5rem;
   width: 100%;
   margin-top: 35px;
@@ -33,7 +29,7 @@ const ProdContainer = styled.div`
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 35px;
+  gap: 40px 30px;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -41,7 +37,7 @@ const ProdContainer = styled.div`
 `;
 
 const Card = styled.div`
-  width: 300px;
+  width: 260px;
   height: min-content;
   padding: 25px;
   background: rgb(27, 27, 27) !important;
@@ -57,7 +53,7 @@ const Image = styled.img`
   text-align: center;
   transition: 0.8s;
   &:hover {
-    transform: scale(1.3) translateY(-15%);
+    transform: scale(1.2) translateY(-15%);
   }
 `;
 
@@ -68,7 +64,7 @@ const CardImg = styled.div`
 
 const H2Style = styled.div`
    color: #ffffff;
-   font-size: 2rem;
+   font-size: 1.6rem;
    font-weight: bold;
 `;
 
@@ -76,9 +72,9 @@ const Btn = styled.button`
   border-radius: 20px;
   background-color: #000;
   margin-top: 30px;
-  font-size: 1rem;
-  width: 200px;
-  height: 40px;
+  font-size: 0.9rem;
+  width: 180px;
+  height: 35px;
   color: #ffffff;
   transition: all 0.5s ease;
   &:hover {
@@ -89,7 +85,7 @@ const Btn = styled.button`
 `;
 
 const Price = styled.div`
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 15px;
   margin-bottom: -15px;
   font-weight: bold;
@@ -100,10 +96,32 @@ const LinkDecor = styled.div`
    color: #E3A3FF;
    font-weight: bold;
    margin-top: 7px;
-   font-size: 1rem;
+   font-size: 0.9rem;
    
-`
+`;
 
 
 
-export { Image, CardImg, Card, ProdContainer, Header, Container, Btn, Price, LinkDecor, H2Style};
+
+// Loading
+
+const Carga = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+
+
+export {
+  Carga,
+  Image,
+  CardImg,
+  Card,
+  ProdContainer,
+  Header,
+  Container,
+  Btn,
+  Price,
+  LinkDecor,
+  H2Style};

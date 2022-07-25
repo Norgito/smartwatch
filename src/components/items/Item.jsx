@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardImg, Image, Btn, Price, LinkDecor, H2Style} from'../StyledComponents'
+import {Card, CardImg, Image, Btn, Price, LinkDecor, H2Style} from'../Styles/StyledComponents'
 import { Link } from 'react-router-dom';
 
 const Item = ({prod, id}) => {
