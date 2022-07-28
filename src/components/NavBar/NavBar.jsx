@@ -18,7 +18,9 @@ function NavBar() {
           </Tabs>
             <Button sx={{marginLeft:"auto"}} variant="outlined" color="secondary">Login</Button>
             <Button sx={{margin:"10px"}} variant="outlined" color="secondary">Register</Button>
+            <Link to="/cart" style={{textDecoration: "none", color: "white"}}>
             <CartWidget />
+            </Link>
         </Toolbar>
       </AppBar>
     </React.Fragment>

@@ -40,7 +40,31 @@ const TextCart = styled.div`
 
 const BtnRemoveAll = styled.button`
     margin-top: 10px;
+    align-self: center;
+`;
+
+const BtnProceed = styled.button`
     align-self: flex-end;
+    margin-bottom:20px;
+    background-color: rgb(128, 50, 151);
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    width: 120px;
+    height: 25px; 
+`;
+
+const BtnCart = styled.button`
+    margin-top: 10px;
+    margin-left: 80px;
+`;
+
+const TotalPrice = styled.div`
+  color: #ffff;
+  margin-top: 20px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  
 `;
 
 export {
@@ -51,4 +75,7 @@ export {
   H2Cart,
   TextCart,
   BtnRemoveAll,
+  BtnCart,
+  TotalPrice,
+  BtnProceed,
 }

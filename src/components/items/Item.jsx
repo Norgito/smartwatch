@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardImg, Image, Btn, Price, LinkDecor, H2Style} from'../Styles/StyledComponents'
+import {Card, CardImg, Image, Btn, Price, H2Style} from'../Styles/StyledComponents'
 import { Link } from 'react-router-dom';
 
 const Item = ({prod, id}) => {
@@ -10,11 +10,12 @@ const Item = ({prod, id}) => {
                <Image src={prod.image} alt={prod.product_name} />
              </CardImg>
                 <H2Style>{prod.product_name}</H2Style>
-                <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
-                    <LinkDecor> MORE DETAILS...</LinkDecor>
-                </Link>
+                
                 <Price>${prod.price}</Price>
-                <Btn style={{cursor: "pointer"}}>ADD TO CART</Btn>
+                <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
+                <Btn style={{cursor: "pointer"}}>MORE DETAILS...</Btn>
+                </Link>
+                
             </Card>
         </div>
     )
