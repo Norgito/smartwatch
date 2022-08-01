@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "./StyleItemDetail.css"
 import {Btn, Carga} from'../Styles/StyledComponents'
 import ItemCount from "../ItemCount/ItemCount";
-import { CartContext } from '../CartContext';
+import { CartContext } from '../../Context/CartContext';
 
 const ItemDetail = ({ prod }) => {
     const [itemCount, setItemCount] = useState(0);

@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import customFetch from "../data/customFetch"
 import ItemDetail from "../ItemDetail/ItemDetail";
-const { products } = require('../data/Products');
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-   const [dato, setDato] = useState({});
+   const [data, setData] = useState({});
    const { idItem } = useParams();
 
 
    useEffect(() => {
-       customFetch(1000, products.find(item => item.id === parseInt(idItem)))
-           .then(result => setDato(result))
-           .catch(err => console.log(err))
+       //Pedido de Firestore
+       const querydb = getFirestore();
+       //Ejecutar Doc
+       const queryDoc = doc(querydb, 'products', idItem);
+       //Lanzar la promesa y capturar
+       getDoc(queryDoc)
+        .then(res => setData({ id: res.id, ...res.data() }))
    }, [idItem]);
    
    return (
-       <ItemDetail prod={dato} />
+       <ItemDetail prod={data} />
    );
 }
 

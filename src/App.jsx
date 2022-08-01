@@ -1,5 +1,5 @@
 
-import Home from "./components/Pages/Home"
+import Home from "./Pages/Home"
 
 const App = () => {
   return <Home />;

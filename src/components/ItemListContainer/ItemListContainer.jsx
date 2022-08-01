@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { Container, ProdContainer, Carga } from "../Styles/StyledComponents";
-import customFetch from "../data/customFetch"
 import ItemList from "../items/ItemList";
 import { useParams } from "react-router-dom";
-const { products } = require('../data/Products');
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"; 
 
 
 const ItemListContainer = () => {
@@ -13,15 +12,16 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {
-    if (id === undefined) {
-        customFetch(1000, products)
-          .then(result => setProductos(result))
-          .catch(err => console.log(err))
-        } else {
-          customFetch(1000, products.filter(item => item.categoryId === parseInt(id)))
-          .then(result => setProductos(result))
-          .catch(err => console.log(err))
-        }
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, 'products');
+    if (id) {
+      const queryFilter = query(queryCollection, where('category', '==', id))
+      getDocs(queryFilter)
+        .then(res => setProductos(res.docs.map(product => ({id: product.id, ...product.data()}))))
+    } else {
+      getDocs(queryCollection)
+        .then(res => setProductos(res.docs.map(product => ({id: product.id, ...product.data()}))))
+    } 
 }, [id]);
   
   return (

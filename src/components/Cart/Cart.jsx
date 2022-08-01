@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../CartContext";
+import { CartContext } from "../../Context/CartContext";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom"
 import {
@@ -15,7 +15,7 @@ import {
   TotalPrice,
 } from "../Styles/Cart-Style";
 
-import FormatNumber from "../Util/FormatNumber"
+import FormatNumber from "../../Util/FormatNumber"
 
 const Cart = () => {
   const test = useContext(CartContext);
