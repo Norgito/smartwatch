@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import {firestoreFetchOne} from "../../Util/firestoreFetch"
 
 const ItemDetailContainer = () => {
    const [data, setData] = useState({});
@@ -9,13 +9,9 @@ const ItemDetailContainer = () => {
 
 
    useEffect(() => {
-       //Pedido de Firestore
-       const querydb = getFirestore();
-       //Ejecutar Doc
-       const queryDoc = doc(querydb, 'products', idItem);
-       //Lanzar la promesa y capturar
-       getDoc(queryDoc)
-        .then(res => setData({ id: res.id, ...res.data() }))
+    firestoreFetchOne(idItem)
+    .then(result => setData(result))
+    .catch(error => console.log(error));
    }, [idItem]);
    
    return (

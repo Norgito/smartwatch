@@ -78,7 +78,7 @@ const Btn = styled.button`
   color: #ffffff;
   transition: all 0.5s ease;
   &:hover {
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.20rem;
     background: #000000;
     box-shadow: 0 0 15px #E3A3FF;
   }
@@ -88,7 +88,6 @@ const Price = styled.div`
   font-size: 1.5rem;
   margin-top: 15px;
   margin-bottom: -15px;
-  font-weight: bold;
   color: #ffffff;
 `;
 
@@ -100,9 +99,6 @@ const LinkDecor = styled.div`
    
 `;
 
-
-
-
 // Loading
 
 const Carga = styled.div`
@@ -110,7 +106,6 @@ const Carga = styled.div`
     justify-content: center;
     align-items: center;
 `;
-
 
 
 export {

@@ -5,8 +5,6 @@ export const CartContext = createContext();
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
 
-   // const addToCart = (prod) => {setCartList([...cartList, prod])}
-
    const addItem = (prod, quantity) => {
     if (isInCart(prod.id)) {
         setCartList(cartList.map(p => {
@@ -26,10 +24,6 @@ const CartContextProvider = ({children}) => {
     }
 
     const totalProducts = () => cartList.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0);
-
-    
-
-    
 
     return (
         <CartContext.Provider value ={{
