@@ -1,13 +1,146 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.socialSize {
+  font-size: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b7b7b7;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(28, 28, 28);
+  border-radius: 10px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.link:hover {
+  transform: rotate(45deg);
+}
+
+.link::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #373737;
+  border-radius: 10px;
+  transition: opasity 0.2s;
+}
+
+.link:hover::before {
+  opacity: 0.4;
+}
+
+.link::before {
+  background: #c404eb;
+}
+
+
+.link:hover::before {
+  filter: blur(7px);
+}
+
+.link i {
+  font-size: 17px;
+  transition: all 0.4s;
+}
+
+.link:hover i {
+  color: #c8c8c8;
+  transform: rotate(-45deg);
+}
+
+.Header {
+  color: #b7b7b7;
+  margin-top: 200px;
+}
+
+.carga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.cargando {
+  position: relative;
+  margin-top: 200px;
+  background: linear-gradient(45deg, transparent, transparent 40%, rgb(169, 115, 185));
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: animate 1.5s linear infinite;
+}
+
+.cargando:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.cargando:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 40%, rgb(169, 115, 185));
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: 1;
+  filter: blur(30px);
+}
+
+.pLoading {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  margin-top: 200px;
+  letter-spacing: 4px;
 }

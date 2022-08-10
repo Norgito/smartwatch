@@ -1,11 +1,12 @@
 
 import "../App"
-import NavBar from "../components/NavBar/NavBar";
-import Cart from "../components/Cart/Cart";
-import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer"
+import NavBar from "../components/NavBar";
+import Cart from "../components/Cart";
+import ItemDetailContainer from "../components/ItemDetailContainer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "../components/ItemListContainer";
 import CartContextProvider from "../Context/CartContext";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Route path="/item/:idItem" element={<ItemDetailContainer />} />
         <Route path='/cart' element={<Cart />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </CartContextProvider>
   );
