@@ -6,7 +6,12 @@
 
 #### PREVIEW
 
+<<<<<<< HEAD
 <img wid src="videos\PagePreview.gif" alt="preview" width="500"></img>
+=======
+<img wid src="https://i.ibb.co/52gMjbs/Desktop-2022-08-11-14-58-36-02-Trim.gif" alt="preview" width="500"></img>
+
+>>>>>>> 62ceefb0af1f21f737775a8629ac0d98e375c637
 
 
 ---
