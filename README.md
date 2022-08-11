@@ -7,7 +7,7 @@
 #### PREVIEW
 
 <<<<<<< HEAD
-<img wid src="videos\PagePreview.gif" alt="preview" width="500"></img>
+<img wid src="videos\PagePreview.gif" alt="preview" width="auto"></img>
 =======
 <img wid src="https://i.ibb.co/52gMjbs/Desktop-2022-08-11-14-58-36-02-Trim.gif" alt="preview" width="500"></img>
 
