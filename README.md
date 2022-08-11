@@ -6,7 +6,7 @@
 
 #### PREVIEW
 
-<img wid src="https://i.imgur.com/BwA0XX5.mp4" alt="preview" width="500"></img>
+<img wid src="https://drive.google.com/file/d/1cvbY6tF3dqjfKd3U8M4Oyko6VpdUBzDM/view?usp=sharing" alt="preview" width="500"></img>
 
 
 ---
