@@ -6,7 +6,7 @@
 
 #### PREVIEW
 
-<img wid src="https://1drv.ms/u/s!AiX-MNQvmaBshOkOgJXZDG4ykQyd_Q" alt="preview" width="500"></img>
+<img wid src="https://i.ibb.co/52gMjbs/Desktop-2022-08-11-14-58-36-02-Trim.gif" alt="preview" width="500"></img>
 
 
 
