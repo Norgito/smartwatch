@@ -65,7 +65,7 @@ const ItemDetail = ({ prod }) => {
         <>
           <Carga>
             <PLoading>LOADING</PLoading>
-            <Cargando></Cargando>
+            <Cargando />
           </Carga>
         </>
       )}

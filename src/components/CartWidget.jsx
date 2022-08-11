@@ -7,7 +7,11 @@ const CartWidget = () => {
   const test = useContext(CartContext);
 
   return (
-    <Badge badgeContent={test.totalProducts()} color="secondary">
+    <Badge
+      badgeContent={test.totalProducts()}
+      style={{ marginRight: "20px" }}
+      color="secondary"
+    >
       <ShoppingCartIcon color="white" />
     </Badge>
   );

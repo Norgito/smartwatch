@@ -1,22 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import {firestoreFetchOne} from "../Util/firestoreFetch"
+import { firestoreFetchOne } from "../Util/firestoreFetch";
 
 const ItemDetailContainer = () => {
-   const [data, setData] = useState({});
-   const { idItem } = useParams();
+  const [data, setData] = useState({});
+  const { idItem } = useParams();
 
-
-   useEffect(() => {
+  useEffect(() => {
     firestoreFetchOne(idItem)
-    .then(result => setData(result))
-    .catch(error => console.log(error));
-   }, [idItem]);
-   
-   return (
-       <ItemDetail prod={data} />
-   );
-}
+      .then((result) => setData(result))
+      .catch((error) => console.log(error));
+  }, [idItem]);
+
+  return <ItemDetail prod={data} />;
+};
 
 export default ItemDetailContainer;

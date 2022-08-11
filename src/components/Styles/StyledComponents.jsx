@@ -8,9 +8,34 @@ const Container = styled.div`
   flex-direction: row;
   position: relative;
   margin: 70px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   box-sizing: border-box;
   flex-wrap: wrap;
+`;
+
+const Carga = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LoadingList = styled.p`
+  position: absolute;
+  z-index: 1;
+  color: white;
+  margin-top: 200px;
+  letter-spacing: 4px;
+`;
+
+const ProdContainer = styled.div`
+  margin-top: 40px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 `;
 
 const Header = styled.h1`
@@ -23,17 +48,6 @@ const Header = styled.h1`
 `;
 
 //Item
-
-const ProdContainer = styled.div`
-  margin-top: 40px;
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-`;
 
 const Card = styled.div`
   width: 260px;
@@ -132,12 +146,6 @@ const PLoading = styled.p`
   letter-spacing: 4px;
 `;
 
-const Carga = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const ItemPrice = styled.p`
   margin-top: 20px;
   color: rgb(169, 115, 185);
@@ -171,7 +179,7 @@ const ItemCardHeader = styled.div`
   margin-top: 100px;
 `;
 
-const ItemBackground = styled.div` 
+const ItemBackground = styled.div`
   inset: 5px;
   width: 790px;
   height: 490px;
@@ -245,42 +253,44 @@ const ItemProdContainer = styled.div`
   margin-top: 110px;
   overflow: hidden;
   border-radius: 20px;
- &::before {
-  content: "";
-  position: absolute;
-  display: flex;
-  width: 1300px;
-  height: 1000px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 110px;
-  border-radius: 20px;
-  background-image: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    #ffffff
-  );
-  animation: animate 4s linear infinite;
-}&&::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  width: 1300px;
-  height: 1000px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 110px;
-  border-radius: 20px;
-  background-image: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    #be05ec
-  );
-  animation: animate 4s linear infinite;
-  animation-delay: -2s;
-}`;
+  &::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 1300px;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    border-radius: 20px;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      #ffffff
+    );
+    animation: animate 4s linear infinite;
+  }
+  &&::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 1300px;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    border-radius: 20px;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      #9705ec
+    );
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+  }
+`;
 
 // Footer
 
@@ -289,34 +299,34 @@ const FooterBackground = styled.div`
   width: 100%;
   position: fixed;
   padding-bottom: 5px;
-  
+  filter: drop-shadow(0 7px 13px #e4b4f3);
   bottom: 0;
   left: 0;
   justify-content: center;
   flex-direction: row;
   height: 60px;
   color: #a8a7a7;
-  background-color: rgb(27, 27, 27)
+  background-color: rgb(27, 27, 27);
 `;
 
 const FooterSocial = styled.div`
-display: flex;
+  display: flex;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   margin-bottom: 5px;
-  
+
   justify-content: center;
   align-items: center;
   flex-direction: row;
 
   color: #a8a7a7;
-  
 `;
 
 export {
   Carga,
+  LoadingList,
   Image,
   CardImg,
   Card,

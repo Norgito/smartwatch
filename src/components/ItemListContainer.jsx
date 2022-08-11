@@ -3,7 +3,8 @@ import {
   Container,
   ProdContainer,
   Carga,
-} from "./Styles/StyledComponents"
+  LoadingList,
+} from "./Styles/StyledComponents";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { firestoreFetch } from "../Util/firestoreFetch";
@@ -20,21 +21,20 @@ const ItemListContainer = () => {
 
   return (
     <>
-    { 
-    ItemList
-    ?
-    <Container> 
-      <ProdContainer>
-       <ItemList items={datos} />
-      </ProdContainer>
-    </Container>
-    : <>
-            <Carga>
-            <p className="pLoading">LOADING</p>
-            <div className='cargando'></div>
-            </Carga>
-         </>
-    }
+      {ItemList ? (
+        <Container>
+          <ProdContainer>
+            <ItemList items={datos} />
+          </ProdContainer>
+        </Container>
+      ) : (
+        <>
+          <Carga>
+            <LoadingList>LOADING</LoadingList>
+            <div className="cargando"></div>
+          </Carga>
+        </>
+      )}
     </>
   );
 };

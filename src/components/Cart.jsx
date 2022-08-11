@@ -162,7 +162,7 @@ const Cart = () => {
                     style={{
                       background: "none",
                       border: "none",
-                      color: "white",
+                      color: "#ee9bff",
                       cursor: "pointer",
                     }}
                   />
@@ -196,7 +196,6 @@ const Cart = () => {
               height="auto"
               alt="empty page"
             />
-            <p style={{ margin: "7px 0 20px" }}> YOUR CART IS EMPTY</p>
             <hr />
             <hr />
             <Link to="/" style={{ textDecoration: "none" }}>
