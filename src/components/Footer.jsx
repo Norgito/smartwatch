@@ -11,13 +11,13 @@ const Footer = () => {
   return (
     <>
       <FooterBackground>
-        <a href="https://github.com/Norgito" className="link">
+        <a href="https://www.instagram.com/norgit0/" className="link">
           <FaInstagramSquare className="socialSize" />
         </a>
-        <a href="https://github.com/Norgito" className="link">
+        <a href="https://www.facebook.com/Norgesantana/" className="link">
           <FaFacebookSquare className="socialSize" />
         </a>
-        <a href="https://github.com/Norgito" className="link">
+        <a href="https://www.linkedin.com/in/norgesantana/" className="link">
           <FaLinkedin className="socialSize" />
         </a>
         <a href="https://github.com/Norgito" className="link">

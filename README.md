@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# SMARTWATCH ⌚ e-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Una app creada por Norge Santana que simula un e-commerce de Reloj Inteligentes... Proyecto creado con fines educativos para el curso de REACT JS de coder house. Por el profesor Alex Marin Mendez ⭐⭐⭐⭐⭐
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+#### PREVIEW
 
-### `npm start`
+<img wid src="https://i.imgur.com/BwA0XX5.mp4" alt="preview" width="500"></img>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+#### HOME
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### La página agrupa los productos en base a las siguientes categorías:
 
-### `npm run build`
+##### ▸ SAMSUNG
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### ▸ APPLE
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### ▸ GARMIN
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### ▸ COLMI
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### CARRITO
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### El carrito cuenta con un icono que pertenece al carrito donde se agrupan los productos seleccionados para "comprar". Allí mismo se ven los detalles de cada libro elegido: imagen, nombre, precio, cantidad y subtotal. Permite eliminar por producto o vaciar el carrito. Tambien incluye un detalle de compra donde se puede observar la cantidad total de productos seleccionados y el precio total a "pagar".
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### FORMULARIO:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Incluye un formulario requerido donde el cliente llenara su informacion para activar el boton de 'Checkout Now' y asi poder finalizar su compra, donde se le enviaria por alerta un ID de su compra exitoza.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### LIBRERÍAS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### ▸ FRAMER-MOTION: ^7.0.1: Libreria utilizada para animacion del navbar.
 
-### Code Splitting
+#### ▸ STYLED-COMPONENTS: ^5.3.5: App estilizada por Style-Components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### ▸ FIREBASE > ^9.9.1: Firebase es un servicio de base de datos en la nube de Google y lo utilice para guardar los productos y ordenes de compra.
 
-### Analyzing the Bundle Size
+#### ▸ MATERIAL UI > ^5.8.6: Es una libreria de iconos. Utilizada en el Navbar y Footer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### ▸ REACT-ROUTER-DOM > ^6.3.0: Librería que facilita la navegacion, utilizada para generar un correcto flow de navegación.
 
-### Making a Progressive Web App
+#### ▸ REACT-TOASTIFY > ^9.0.7: Librería para la creacion y diseño de alertas. Utilizada en el cart al finalizar la "compra".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+#### FOOTER
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+##### PODRÁN ENCONTRAR UN BOTON QUE LLEVA DIRECTO A GITHUB, LINKEDIN, FACEBOOK Y INSTRAGRAM
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### DEPLOY
 
-### `npm run build` fails to minify
+https://react-smartwatch.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+#### CONTACTO
+
+##### ▸[GITHUB](https://github.com/Norgito)
+
+##### ▸[LINKEDIN](https://www.linkedin.com/in/norgesantana/)
